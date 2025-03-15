@@ -35,7 +35,10 @@ const AuthPage = () => {
         }, 1500);
       }
     } catch (error) {
-      setMessage({ text: error.response?.data || "Something went wrong!", type: "danger" });
+      setMessage({
+        text: error.response?.data.message || JSON.stringify(error.response?.data) || "Something went wrong!",
+        type: "danger",
+      });
     }
   };
 
@@ -120,7 +123,6 @@ const AuthPage = () => {
             <button className="social-btn google">
               <FcGoogle className="social-icon" />Sign in with Google
             </button>
-            
             
           </div>
         </form>

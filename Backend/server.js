@@ -11,7 +11,7 @@ app.use('/api/users',userRoute);
 
 dotenv.config();
 
-mongoose.connect("mongodb+srv://teamdelta:teamdelta@cluster0.9vrz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://nairayush45:nairayush45@cluster0.3daw0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>{ 
     app.listen(process.env.PORT ||8000 ,(err)=>{
         if(err)
