@@ -11,8 +11,8 @@ app.use('/api/users',userRoute);
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI)
-.then(()=>{
+mongoose.connect("mongodb+srv://teamdelta:teamdelta@cluster0.9vrz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+.then(()=>{ 
     app.listen(process.env.PORT ||8000 ,(err)=>{
         if(err)
             console.log("Not connected to the database");
